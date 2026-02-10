@@ -38,6 +38,36 @@ export type Database = {
         }
         Relationships: []
       }
+      duo_schools: {
+        Row: {
+          created_at: string
+          expires_at: string
+          id: string
+          schools_data: Json
+          scraped_at: string
+          sector: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          expires_at?: string
+          id?: string
+          schools_data?: Json
+          scraped_at?: string
+          sector: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string
+          id?: string
+          schools_data?: Json
+          scraped_at?: string
+          sector?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       messages: {
         Row: {
           content: string
