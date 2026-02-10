@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 const navigation = [
   { name: "Ontdek het onderwijs", href: "/kennisbank" },
   { name: "Opleidingen", href: "/opleidingen" },
+  { name: "Scholen", href: "/scholen" },
   { name: "Agenda", href: "/events" },
   { name: "Vacatures", href: "/vacatures" },
 ];

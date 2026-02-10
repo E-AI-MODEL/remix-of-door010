@@ -1,1 +1,7 @@
 project_id = "xmpnspapjarkeuxftroe"
+
+[functions.fetch-duo-schools]
+verify_jwt = false
+
+[functions.fetch-affiliated-schools]
+verify_jwt = false
