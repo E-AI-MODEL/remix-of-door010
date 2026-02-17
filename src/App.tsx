@@ -3,18 +3,11 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { PublicChatWidget } from "@/components/chat/PublicChatWidget";
 import Index from "./pages/Index";
 import Vacatures from "./pages/Vacatures";
 import Events from "./pages/Events";
 import Opleidingen from "./pages/Opleidingen";
 import Kennisbank from "./pages/Kennisbank";
-import Auth from "./pages/Auth";
-import Dashboard from "./pages/Dashboard";
-import Chat from "./pages/Chat";
-import Profile from "./pages/Profile";
-import Backoffice from "./pages/Backoffice";
 import Scholen from "./pages/Scholen";
 import NotFound from "./pages/NotFound";
 
@@ -23,28 +16,19 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <AuthProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/vacatures" element={<Vacatures />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/opleidingen" element={<Opleidingen />} />
-            <Route path="/kennisbank" element={<Kennisbank />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/backoffice" element={<Backoffice />} />
-            <Route path="/scholen" element={<Scholen />} />
-            <Route path="/chat" element={<Chat />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <PublicChatWidget />
-        </BrowserRouter>
-      </AuthProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/vacatures" element={<Vacatures />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/opleidingen" element={<Opleidingen />} />
+          <Route path="/kennisbank" element={<Kennisbank />} />
+          <Route path="/scholen" element={<Scholen />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
