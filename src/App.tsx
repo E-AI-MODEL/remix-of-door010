@@ -9,6 +9,7 @@ import Events from "./pages/Events";
 import Opleidingen from "./pages/Opleidingen";
 import Kennisbank from "./pages/Kennisbank";
 import Scholen from "./pages/Scholen";
+import Chat from "./pages/Chat";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/opleidingen" element={<Opleidingen />} />
           <Route path="/kennisbank" element={<Kennisbank />} />
           <Route path="/scholen" element={<Scholen />} />
+          <Route path="/chat" element={<Chat />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

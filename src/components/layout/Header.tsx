@@ -9,6 +9,7 @@ const navigation = [
   { name: "Scholen", href: "/scholen" },
   { name: "Agenda", href: "/events" },
   { name: "Vacatures", href: "/vacatures" },
+  { name: "Chat", href: "/chat" },
 ];
 
 function Logo() {
